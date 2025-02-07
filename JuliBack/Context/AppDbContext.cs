@@ -1,27 +1,30 @@
 ﻿using JuliBack.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
-
 namespace JuliBack.Contexto
 {
     public class AppDbContext : DbContext
     {
         private readonly IConfiguration configuration;
         public AppDbContext(DbContextOptions<AppDbContext> options, IConfiguration configuration)
-        
-        : base(options)
+            : base(options)
         {
             this.configuration = configuration;
+            Users = Set<Users>();
+            Images = Set<Images>();
         }
-
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+                var databaseVersion = configuration["DatabaseVersion"];
+
+                if (string.IsNullOrEmpty(databaseVersion))
+                {
+                    throw new InvalidOperationException("DatabaseVersion is not configured.");
+                }
                 var connectionString = configuration.GetConnectionString("DefaultConnection");
-                var serverVersion = new MySqlServerVersion(new Version(configuration["DatabaseVersion"]));
+                var serverVersion = new MySqlServerVersion(new Version(databaseVersion));
                 optionsBuilder.UseMySql(connectionString, serverVersion);
             }
         }

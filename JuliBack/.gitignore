@@ -1,0 +1,19 @@
+﻿# Ignorar archivos binarios y de compilación
+bin/
+obj/
+
+# Ignorar archivos específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de Visual Studio
+.vs/
+.idea/
+/Properties
+
+
+# Archivos protegidos
+
+/Recursos
+Program.cs
+
