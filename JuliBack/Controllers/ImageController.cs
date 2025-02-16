@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc; // Para utilizar los atributos y clases de MVC
 using JuliBack.Repositories;
-using JuliBack.Services;      // Para acceder a tu contexto de datos (reemplaza YourNamespace con tu espacio de nombres real)
+using JuliBack.Services;      
 
 
 namespace JuliBack.Controllers
