@@ -1,6 +1,6 @@
 ﻿# Julian Designer Backend
 
-Se trata de una aplicación web desarrollada en .NET 9 y C# 13.0 que permite la gestión de imágenes y usuarios. Utiliza Cloudinary para el almacenamiento de imágenes y MySQL como base de datos.
+Aplicación Backend web desarrollada en .NET 9 que permite la gestión de imágenes y usuarios. Utiliza Cloudinary para el almacenamiento de imágenes y MySQL como base de datos.
 
 ## Características
 
