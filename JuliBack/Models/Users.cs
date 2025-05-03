@@ -1,5 +1,4 @@
-namespace JuliBack.Models
-{
+namespace JuliBack.Models;
     public class Users
     {
         public int Id { get; set; }
@@ -8,4 +7,4 @@ namespace JuliBack.Models
 
 
     }
-}
+

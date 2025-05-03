@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace JuliBack.Models
-{
+namespace JuliBack.Models;
     public class Images
     {
         
@@ -13,4 +12,4 @@ namespace JuliBack.Models
         public string Section { get; set; } = string.Empty;
         public int Userid { get; set; }
     }
-}
+
