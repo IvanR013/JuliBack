@@ -5,7 +5,7 @@ using JuliBack.Services;      // Para acceder a tu contexto de datos (reemplaza 
 
 namespace JuliBack.Controllers;
 
-//http://localhost:5081/api/Image/Getimages
+// http://localhost:5081/api/Image/Getimages
 [ApiController]
 [Route("api/[controller]")]
 public partial class ImageController : ControllerBase

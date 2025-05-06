@@ -6,6 +6,7 @@ using JuliBack.Models;
 namespace JuliBack.Controllers;
 
 //http://localhost:5081/api/User/login
+
 [ApiController]
 [Route("api/[controller]")]
 public partial class UserController : ControllerBase
@@ -14,7 +15,7 @@ public partial class UserController : ControllerBase
     public UserController(IuserRepository userRepository) => _userRepository = userRepository;
 
     [HttpPost("login")]
-    public async Task<IActionResult> AuthenticateUser([FromBody] Users loginRequest)
+    public async Task<IActionResult> AuthenticateUser([FromForm] Users loginRequest)
     {
         if (loginRequest == null || string.IsNullOrEmpty(loginRequest.Username) || string.IsNullOrEmpty(loginRequest.Password))
 

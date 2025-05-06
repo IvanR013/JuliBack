@@ -1,6 +1,6 @@
 using CloudinaryDotNet;
 using JuliBack.Contexto;
-using JuliBack.Recursos;
+using JuliBack.Resources;
 using JuliBack.Repositories;
 using JuliBack.Services;
 using Microsoft.EntityFrameworkCore;
